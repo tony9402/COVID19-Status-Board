@@ -52,3 +52,17 @@ docker run --name kib01-test --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=
 ├── make_csv.ipynb
 └── region_data.csv
 ```
+
+### Figure
+
+##### city_data
+
+<img src="assets/city.png"></img>
+
+##### corona_daliy_data
+
+<img src="assets/daliy.png"></img>
+
+##### region
+
+<img src="assets/country.png"></img>
