@@ -26,10 +26,12 @@ docker pull docker.elastic.co/logstash/logstash:7.15.0
 docker pull docker.elastic.co/kibana/kibana:7.15.0
 
 docker run --name es01-test --net elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.15.0
+docker run --name kib01-test --net elastic -p 5601:5601 -e "ELASTICSEARCH_HOSTS=http://es01-test:9200" docker.elastic.co/kibana/kibana:7.15.0
 ```
 
 ## Directory
 
+```
 ├── Dockerfile
 ├── README.md
 ├── city_data.csv
@@ -49,3 +51,4 @@ docker run --name es01-test --net elastic -p 9200:9200 -p 9300:9300 -e "discover
 │   └── Weather.csv
 ├── make_csv.ipynb
 └── region_data.csv
+```
